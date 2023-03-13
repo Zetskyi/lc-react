@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 import {useState} from 'react';
 import Another from './Another';
 
-function App() {
+function AppOriginal() {
   const [count, setCount] = useState(0);
 
   const decrement = () => setCount(prevCount => prevCount-1);
@@ -27,7 +27,7 @@ function App() {
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/AppOriginal.js</code> and save to reload.
         </p>
         { true &&
           <p style={someStyle}>{3 + 2}</p>
@@ -46,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppOriginal;
