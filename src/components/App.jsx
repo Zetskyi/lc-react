@@ -98,6 +98,11 @@ function App() {
         setTodos(updatedTodos);
     }
 
+    function remaining()
+    {
+        return todos.filter(todo => !todo.isComplete).length
+    }
+
     return (
         <div className="todo-app-container">
             <div className="todo-app">
@@ -113,6 +118,7 @@ function App() {
                         updateTodo={updateTodo}
                         cancelEdit={cancelEdit}
                         deleteTodo={deleteTodo}
+                        remaining={remaining}
                     />
                 ) : (
                     <NoTodos/>
